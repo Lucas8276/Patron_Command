@@ -1,18 +1,19 @@
 package objetos
 
-import (
-	"fmt"
-	
-)
+import "fmt"
 
-type Celular struct{
-
-	Marca string
-	Modelo string
-
+type Celular struct {
+	Marca          string
+	Modelo         string
+	NivelDeBateria int
 }
 
-func (c Celular) Cargar()string{
-	return fmt.Sprintf("Cargando Celular,Marca:%s,Modelo:%s",c.Marca,c.Modelo)
-	
+
+
+
+func (c *Celular) Cargar() {
+	if c.NivelDeBateria < 100 {
+		c.NivelDeBateria = 100
+	}
+	fmt.Printf("Ahora tu celu esta cargado\n")
 }
