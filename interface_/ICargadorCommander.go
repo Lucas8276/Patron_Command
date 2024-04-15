@@ -1,5 +1,5 @@
 package interface_
 
-type Commander interface{
+type Commander interface {
 	EmitirComando(comando CargadorUniversalCommand)
 }

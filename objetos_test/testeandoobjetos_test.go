@@ -27,7 +27,7 @@ func TestCargar_Celular(t*testing.T){
 }
 
 func TestCargar_Ups(t*testing.T){
-	u := objetos.Ups{false}
+	u := objetos.Ups{Bateria: false}
 	invocadorsupremo := &interface_.Cargador_invoker{}
 	invocadorsupremo.EmitoComando(&u)
 	if u.Bateria==true{
@@ -38,7 +38,7 @@ func TestCargar_Ups(t*testing.T){
 func TestCompleto(t*testing.T){
 	a := objetos.Auto{Marca: "Nissan",Modelo: "Gtr",Bateria: 30.7}
 	c := objetos.Celular{Marca: "Nokia",Modelo: "1100",NivelDeBateria: 57}
-	u := objetos.Ups{false}
+	u := objetos.Ups{Bateria: false}
 	invocadorsupremo := &interface_.Cargador_invoker{}
 	invocadorsupremo.EmitoComando(&a)
 	invocadorsupremo.EmitoComando(&c)
